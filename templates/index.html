@@ -1,0 +1,92 @@
+<html>
+<head>
+    <link href="{{url_for('static',filename='css/styles.css')}}" rel="stylesheet">
+    <title>Home Automation System</title>
+<style>
+    body
+    {
+        background-size: cover;
+        background-image: url({{url_for ('static', filename='images/2.jpg')}})
+    }
+    h1{
+	font-size: 45px;
+	color: aliceblue;
+	font-family: ziglets;
+}
+
+.container{
+	text-align: center;
+	margin-top:45px;
+}
+
+
+.btn2{
+	width: 220px;
+	padding: 10px 20px;
+	border: none;
+	color: white;
+	border-radius: 4px;
+	transition: ease-out 0.5s;
+	outline: none;
+	font-size: 20px;
+	font-family:"montserrat";
+	border:solid #2a1443;
+	position: relative;
+	z-index: 1;
+	margin: 10px;
+	background-color: gray;
+
+}
+
+.btn2:hover{
+	color: black;
+	cursor: pointer;
+}
+
+.btn2::before{
+	transition: 0.5s all ease;
+	position: absolute;
+	top:0;
+	left: 50%;
+	right: 50%;
+	bottom: 0;
+	opacity: 0;
+	content: "";
+	background-color: #a98ec8;
+}
+
+.btn2:hover::before{
+	transition: 0.5s all ease;
+	left: 0;
+	right: 0;
+	opacity: 1;
+	z-index: -1;
+}
+
+</style>
+</head>
+    <body>
+    <center>
+        <br>
+        <h1 style="color:#df8191; font-family:copperplate; font-size:50px;">SMART HOME</h1>
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <a href="/led_on"><button class="btn btn2" >LIGHTS ON</button></a>
+        <a href="/led_off"><button class="btn btn2">LIGHTS OFF</button></a><br>
+        <a href="/door_open"><button class="btn btn2">DOOR OPEN</button></a>
+        <a href="/door_close"><button class="btn btn2">DOOR CLOSE</button></a><br>
+
+        <!--<a href="/ldr_on"><button class="btn btn2">LDR ON</button></a>
+        <a href="/ldr_off"><button class="btn btn2">LDR OFF</button></a><br>
+        <a href="/dht_on"><button class="btn btn2">DHT ON</button></a>
+        <a href="/dht_off"><button class="btn btn2">DHT OFF</button></a><br>
+        <a href="/buzzer_on"><button class="btn btn2">BUZZER ON</button></a>
+        <a href="/buzzer_off"><button class="btn btn2">BUZZER OFF</button></a><br>
+        <a href="/gas_detector_on"><button class="btn btn2">GAS DETECTOR ON</button></a>
+        <a href="/gas_detector_off"><button class="btn btn2">GAS DETECTOR OFF</button></a>-->
+    </center>
+    </div>
+    </body>
+</html>
